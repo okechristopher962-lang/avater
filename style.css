@@ -1,0 +1,504 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+
+.village {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        to bottom,
+        #6ec6ff 0%,
+        #b9e9ff 60%,
+        #82c91e 60%,
+        #4f9d1a 100%
+    );
+}
+
+
+
+
+.sun {
+    width: 80px;
+    height: 80px;
+    background: yellow;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 60px;
+    left: 100px;
+
+    box-shadow: 0 0 30px yellow;
+
+    animation: sunMove 10s infinite alternate;
+}
+
+@keyframes sunMove {
+
+    0% {
+        top: 100px;
+        left: 100px;
+    }
+
+    100% {
+        top: 40px;
+        left: 70%;
+    }
+}
+
+
+
+.cloud {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+
+    animation: cloudMove 20s linear infinite;
+}
+
+.cloud span {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud span:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: 10px;
+}
+
+.cloud span:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    left: 50px;
+    top: -10px;
+}
+
+.cloud span:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    left: 90px;
+    top: 10px;
+}
+
+.cloud1 {
+    top: 100px;
+    left: -200px;
+}
+
+.cloud2 {
+    top: 180px;
+    left: -400px;
+    animation-delay: 8s;
+}
+
+@keyframes cloudMove {
+
+    from {
+        left: -200px;
+    }
+
+    to {
+        left: 110%;
+    }
+}
+
+
+
+
+.mountain {
+    position: absolute;
+    bottom: 40%;
+    width: 0;
+    height: 0;
+
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 250px solid #527d35;
+}
+
+.mountain1 {
+    left: 10%;
+}
+
+.mountain2 {
+    left: 45%;
+    border-bottom-color: #426b2b;
+}
+
+
+.house {
+    position: absolute;
+    bottom: 40%;
+    left: 25%;
+}
+
+.house-body {
+    width: 180px;
+    height: 140px;
+    background: #d98c4a;
+    position: relative;
+}
+
+.roof {
+    width: 0;
+    height: 0;
+
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-bottom: 100px solid #713b22;
+
+    position: absolute;
+    top: -90px;
+    left: -20px;
+}
+
+.door {
+    width: 40px;
+    height: 70px;
+    background: #5b321e;
+
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+}
+
+.window {
+    width: 40px;
+    height: 40px;
+    background: #8ed8ff;
+
+    position: absolute;
+    top: 30px;
+    left: 20px;
+
+    border: 5px solid white;
+}
+
+
+
+
+.tree {
+    position: absolute;
+    bottom: 40%;
+}
+
+.tree1 {
+    left: 5%;
+}
+
+.tree2 {
+    right: 8%;
+}
+
+.trunk {
+    width: 30px;
+    height: 100px;
+    background: #71452a;
+    margin: auto;
+}
+
+.leaves {
+    width: 110px;
+    height: 110px;
+    background: #287a28;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 70px;
+    left: -40px;
+
+    animation: treeMove 2s ease-in-out infinite alternate;
+}
+
+@keyframes treeMove {
+
+    from {
+        transform: rotate(-3deg);
+    }
+
+    to {
+        transform: rotate(3deg);
+    }
+}
+
+
+
+
+.road {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40%;
+
+    background: #444;
+}
+
+.road-line {
+    position: absolute;
+
+    width: 100px;
+    height: 8px;
+
+    background: white;
+    top: 50%;
+}
+
+.line1 {
+    left: 5%;
+}
+
+.line2 {
+    left: 35%;
+}
+
+.line3 {
+    left: 65%;
+}
+
+.line4 {
+    left: 95%;
+}
+
+
+
+
+.person {
+    position: absolute;
+
+    width: 60px;
+    height: 150px;
+
+    bottom: 20%;
+    left: -80px;
+
+    animation: personMove 12s linear infinite;
+}
+
+
+
+
+.head {
+    width: 35px;
+    height: 35px;
+
+    background: #d99a6c;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 12px;
+}
+
+
+
+
+.body {
+    width: 15px;
+    height: 60px;
+
+    background: #2455a4;
+
+    position: absolute;
+    top: 35px;
+    left: 22px;
+}
+
+
+
+
+.arm {
+    width: 10px;
+    height: 55px;
+
+    background: #d99a6c;
+
+    position: absolute;
+    top: 40px;
+
+    transform-origin: top center;
+}
+
+.left-arm {
+    left: 15px;
+    animation: leftArm 0.6s infinite alternate;
+}
+
+.right-arm {
+    left: 34px;
+    animation: rightArm 0.6s infinite alternate;
+}
+
+
+
+
+.leg {
+    width: 10px;
+    height: 60px;
+
+    background: #222;
+
+    position: absolute;
+    top: 90px;
+
+    transform-origin: top center;
+}
+
+.left-leg {
+    left: 20px;
+    animation: leftLeg 0.6s infinite alternate;
+}
+
+.right-leg {
+    left: 30px;
+    animation: rightLeg 0.6s infinite alternate;
+}
+
+
+
+
+@keyframes personMove {
+
+    0% {
+        left: -80px;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+
+
+
+@keyframes leftLeg {
+
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes rightLeg {
+
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+
+
+@keyframes leftArm {
+
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes rightArm {
+
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+
+
+.car {
+    position: absolute;
+
+    width: 180px;
+    height: 80px;
+
+    bottom: 12%;
+    left: -200px;
+
+    animation: carMove 8s linear infinite;
+}
+
+.car-body {
+    position: absolute;
+
+    width: 180px;
+    height: 50px;
+
+    background: #d62828;
+
+    bottom: 0;
+
+    border-radius: 15px;
+}
+
+.car-top {
+    position: absolute;
+
+    width: 90px;
+    height: 45px;
+
+    background: #d62828;
+
+    left: 40px;
+    bottom: 40px;
+
+    border-radius: 30px 30px 0 0;
+}
+
+.wheel {
+    position: absolute;
+
+    width: 35px;
+    height: 35px;
+
+    background: #111;
+
+    border-radius: 50%;
+
+    bottom: -15px;
+}
+
+.wheel1 {
+    left: 25px;
+}
+
+.wheel2 {
+    right: 25px;
+}
+
+@keyframes carMove {
+
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
